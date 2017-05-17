@@ -5,6 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ionic-material','angularjs-gauge']);
 
+
 app.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -44,7 +45,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'menuContent': {
                 templateUrl: 'templates/about.html',
-                //controller: 'InkCtrl'
+                controller: 'AboutCtrl'
             }
         }
     })
@@ -78,7 +79,38 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    ;
+    .state('app.lpg', {
+      url: '/lpg',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/lpg.html',
+        }
+      }
+    })
+    .state('app.methane', {
+      url: '/methane',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/methane.html',
+        }
+      }
+    })
+    .state('app.hydrogen', {
+      url: '/hydrogen',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/hydrogen.html',
+        }
+      }
+    })
+    .state('app.carbon', {
+      url: '/carbon',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/carbon.html',
+        }
+      }
+    })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/home');

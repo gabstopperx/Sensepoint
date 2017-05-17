@@ -1,7 +1,11 @@
 /* Empty. Add your own CSS if you like */
 /* Utilities */
-
-
+.box1{
+   height: 693px;
+}
+.box2{
+   height: 693px;
+}
 #codexlist{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     border-radius:5px;
